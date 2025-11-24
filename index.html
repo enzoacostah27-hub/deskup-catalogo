@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DeskUp - Escritorios Elevables</title>
+  <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background: #eef1f3; color: #222; }
+    .header { background: linear-gradient(90deg, #3d4a4e 60%, #2796d4 100%); color: #fff; padding: 30px 0 45px 0; text-align: center; position: relative;}
+    .header h1 { font-size: 2.7rem; margin: 8px 0; }
+    .header p { font-size: 1.08rem; margin: 4px 0 14px 0;}
+    nav { margin-top: 15px;}
+    nav a { color: #fff; text-decoration: none; margin: 0 22px; font-weight: 600; font-size: 1.08rem; transition: opacity 0.2s;}
+    nav a:hover { opacity: 0.65;}
+    .banner { background: #2796d4; color: #fff; margin: -23px auto 0 auto; max-width: 650px; border-radius: 22px; padding: 18px 16px; font-size: 1.2rem; font-weight: 500; position: relative; top:-22px; box-shadow: 0 3px 19px rgba(61,74,78,0.08);}
+    .container { max-width: 1080px; margin: 40px auto; background: #fff; border-radius: 14px; box-shadow: 0 7px 19px rgba(61,74,78,0.07); padding: 39px 32px 36px 32px; }
+    section { margin-bottom: 42px;}
+    .catalog { display: flex; flex-wrap: wrap; gap: 34px; margin-top: 24px;}
+    .product { flex: 1; min-width: 270px; background: #f6f8fb; border-radius: 12px; box-shadow: 0 2px 9px rgba(61,74,78,0.09); padding: 22px; text-align: center; position: relative; transition: transform 0.13s;}
+    .product:hover { transform: scale(1.04); box-shadow: 0 10px 26px rgba(39,150,212,0.10); }
+    .product img { width: 93%; max-width: 280px; border-radius: 10px; margin-bottom: 16px; background: #e1e7ea; box-shadow: 0 2px 9px rgba(61,74,78,0.04);}
+    .product h2 { color: #2796d4; margin: 12px 0 8px 0; font-size: 1.22rem;}
+    .price { font-size: 1.25rem; font-weight: bold; color: #3d4a4e; margin-bottom: 15px;}
+    .features { text-align: left; margin: 9px 0 18px 0; font-size: 0.96rem; min-height: 110px;}
+    .buy-btn { display: inline-block; background: #2796d4; color: #fff; text-decoration: none; padding: 12px 28px; font-size: 1.07rem; border-radius: 20px; font-weight: 600; transition: background 0.2s;}
+    .buy-btn:hover { background: #3d4a4e;}
+    .section-title { font-size: 1.44rem; color: #3d4a4e; margin-bottom: 3px; }
+    .testimonials { margin-top: 38px;}
+    .testimonial { background: #e1e7ea; color: #333; border-radius: 13px; padding: 17px 20px; margin: 0 0 18px 0; box-shadow: 0 2px 7px rgba(39,150,212,0.07);}
+    .client { font-weight: bold; color: #2796d4;}
+    .contact-block { background: #ebeded; border-radius: 13px; padding: 28px 27px; text-align: center; box-shadow: 0 2px 9px rgba(39,150,212,0.05);}
+    .contact-block a { color: #2796d4; font-weight: 600; text-decoration: underline; margin: 0 6px;}
+    @media (max-width: 900px) { .catalog { flex-direction: column; gap: 24px; } }
+    @media (max-width: 600px) { .container{padding:14px;} .section-title{font-size:1.09rem;} .banner{font-size:1.04rem;} }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>DeskUp</h1>
+    <p>Levántate. Muévete. Vive mejor</p>
+    <nav>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#why">¿Por qué DeskUp?</a>
+      <a href="#testimonios">Clientes</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+  <div class="banner">
+    <span>🌟 Envíos GRATIS en Lima durante el lanzamiento. Descubre DeskUp y optimiza tu espacio hoy.</span>
+  </div>
+  <div class="container">
+    <section id="catalogo">
+      <div class="section-title">Descubre nuestros modelos exclusivos</div>
+      <div class="catalog">
+        <div class="product">
+          <img src="imagen_v1.png" alt="Escritorio Elevable V1">
+          <h2>Escritorio Elevable V1</h2>
+          <div class="price">S/ 650</div>
+          <div class="features">
+            <ul>
+              <li>Ajuste manual por manivela, robusto y estable</li>
+              <li>Estructura metálica y tablero MDF 18mm</li>
+              <li>Regulación de altura 70-120cm</li>
+              <li>Soporta hasta 70kg</li>
+              <li>Acabados personalizados, ideal para home office</li>
+            </ul>
+          </div>
+          <a class="buy-btn" href="https://wa.me/51999999999" target="_blank">Comprar</a>
+        </div>
+        <div class="product">
+          <img src="imagen_v2.png" alt="Escritorio con Accesorios">
+          <h2>Escritorio con Accesorios</h2>
+          <div class="price">S/ 780</div>
+          <div class="features">
+            <ul>
+              <li>Motor eléctrico silencioso, panel digital</li>
+              <li>Memoria de altura (4 presets)</li>
+              <li>Superficie anti-rayones y organizador de cables</li>
+              <li>Base antideslizante, diseño premium</li>
+              <li>Perfecto para profesionales creativos</li>
+            </ul>
+          </div>
+          <a class="buy-btn" href="https://wa.me/51999999999" target="_blank">Comprar</a>
+        </div>
+        <div class="product">
+          <img src="imagen_v3.png" alt="Estación de Trabajo Premium">
+          <h2>Estación de Trabajo Premium</h2>
+          <div class="price">S/ 1,200</div>
+          <div class="features">
+            <ul>
+              <li>Motor dual, ultra silencioso y potente</li>
+              <li>Superficie amplia: 1.52m x 0.76m</li>
+              <li>Gestión de cables, puerto USB integrado</li>
+              <li>Acabados premium, soporte incluido</li>
+              <li>Ideal para teletrabajo y oficinas exigentes</li>
+            </ul>
+          </div>
+          <a class="buy-btn" href="https://wa.me/51999999999" target="_blank">Comprar</a>
+        </div>
+      </div>
+    </section>
+    <section id="why">
+      <div class="section-title">¿Por qué elegir DeskUp?</div>
+      <ul>
+        <li>Mejora tu salud postural y previene lesiones.</li>
+        <li>Incrementa la productividad con cambios de altura.</li>
+        <li>Fácil montaje y soporte local en Lima.</li>
+        <li>Diseño pensado para espacios modernos y funcionales.</li>
+        <li>Garantía extendida y atención personalizada.</li>
+      </ul>
+    </section>
+    <section id="testimonios" class="testimonials">
+      <div class="section-title">Lo que dicen nuestros clientes</div>
+      <div class="testimonial">
+        “Cambió mi rutina de home office. Ahora puedo trabajar de pie durante las videollamadas”. <span class="client">— Ana, Lima</span>
+      </div>
+      <div class="testimonial">
+        “El armado fue fácil y el motor silencioso me ayuda a alternar alturas sin molestar a nadie”. <span class="client">— Javier, Surco</span>
+      </div>
+      <div class="testimonial">
+        “El diseño minimalista encajó perfecto en mi estudio. Excelente atención y envío rápido”. <span class="client">— Mónica, San Isidro</span>
+      </div>
+    </section>
+    <section id="contacto">
+      <div class="section-title">Contáctanos</div>
+      <div class="contact-block">
+        ¿Tienes dudas? ¡Escríbenos por WhatsApp o correo!<br>
+        <a href="https://wa.me/51999999999" target="_blank">WhatsApp DeskUp</a> |
+        <a href="mailto:ventas@deskup.com">Correo de consultas</a>
+        <br><br><strong>Solicita tu demo virtual o cotiza tu modelo personalizado. <br> Envíos gratis en Lima por lanzamiento.</strong>
+      </div>
+    </section>
+  </div>
+  <footer style="text-align:center; background:#3d4a4e; color:#fff; padding:23px 0; margin-top:32px;">
+    DeskUp &copy; 2025 - Salud, diseño, productividad en cada escritorio.
+  </footer>
+</body>
+</html>
+
