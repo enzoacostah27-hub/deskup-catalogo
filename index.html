@@ -3,123 +3,199 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>DeskUp - Escritorios Elevables</title>
+  <title>DeskUp - Liderazgo en Ergonomía y Diseño</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background: #eef1f3; color: #222; }
-    .header { background: linear-gradient(90deg, #3d4a4e 60%, #2796d4 100%); color: #fff; padding: 30px 0 45px 0; text-align: center; position: relative;}
-    .header h1 { font-size: 2.7rem; margin: 8px 0; }
-    .header p { font-size: 1.08rem; margin: 4px 0 14px 0;}
-    nav { margin-top: 15px;}
-    nav a { color: #fff; text-decoration: none; margin: 0 22px; font-weight: 600; font-size: 1.08rem; transition: opacity 0.2s;}
-    nav a:hover { opacity: 0.65;}
-    .banner { background: #2796d4; color: #fff; margin: -23px auto 0 auto; max-width: 650px; border-radius: 22px; padding: 18px 16px; font-size: 1.2rem; font-weight: 500; position: relative; top:-22px; box-shadow: 0 3px 19px rgba(61,74,78,0.08);}
-    .container { max-width: 1080px; margin: 40px auto; background: #fff; border-radius: 14px; box-shadow: 0 7px 19px rgba(61,74,78,0.07); padding: 39px 32px 36px 32px; }
-    section { margin-bottom: 42px;}
-    .catalog { display: flex; flex-wrap: wrap; gap: 34px; margin-top: 24px;}
-    .product { flex: 1; min-width: 270px; background: #f6f8fb; border-radius: 12px; box-shadow: 0 2px 9px rgba(61,74,78,0.09); padding: 22px; text-align: center; position: relative; transition: transform 0.13s;}
-    .product:hover { transform: scale(1.04); box-shadow: 0 10px 26px rgba(39,150,212,0.10); }
-    .product img { width: 93%; max-width: 280px; border-radius: 10px; margin-bottom: 16px; background: #e1e7ea; box-shadow: 0 2px 9px rgba(61,74,78,0.04);}
-    .product h2 { color: #2796d4; margin: 12px 0 8px 0; font-size: 1.22rem;}
-    .price { font-size: 1.25rem; font-weight: bold; color: #3d4a4e; margin-bottom: 15px;}
-    .features { text-align: left; margin: 9px 0 18px 0; font-size: 0.96rem; min-height: 110px;}
-    .buy-btn { display: inline-block; background: #2796d4; color: #fff; text-decoration: none; padding: 12px 28px; font-size: 1.07rem; border-radius: 20px; font-weight: 600; transition: background 0.2s;}
-    .buy-btn:hover { background: #3d4a4e;}
-    .section-title { font-size: 1.44rem; color: #3d4a4e; margin-bottom: 3px; }
-    .testimonials { margin-top: 38px;}
-    .testimonial { background: #e1e7ea; color: #333; border-radius: 13px; padding: 17px 20px; margin: 0 0 18px 0; box-shadow: 0 2px 7px rgba(39,150,212,0.07);}
-    .client { font-weight: bold; color: #2796d4;}
-    .contact-block { background: #ebeded; border-radius: 13px; padding: 28px 27px; text-align: center; box-shadow: 0 2px 9px rgba(39,150,212,0.05);}
-    .contact-block a { color: #2796d4; font-weight: 600; text-decoration: underline; margin: 0 6px;}
-    @media (max-width: 900px) { .catalog { flex-direction: column; gap: 24px; } }
-    @media (max-width: 600px) { .container{padding:14px;} .section-title{font-size:1.09rem;} .banner{font-size:1.04rem;} }
+    body { font-family: 'Montserrat', 'Roboto', Arial, sans-serif; margin: 0; background: #eaf0f5; color: #232f3e;}
+    /* --- HEADER --- */
+    .header {background: linear-gradient(90deg, #3d4a4e 68%, #58a3e0 100%); color: #fff; padding: 38px 0 60px 0; text-align: center; box-shadow: 0 2px 24px #58a3e015;}
+    .header h1 {font-size:3.2rem;margin:8px 0 6px;font-weight:700;letter-spacing:-2px;}
+    .header p {font-size:1.18rem;margin:0 0 18px;opacity:0.95;}
+    nav a {color: #fff; text-decoration: none; margin: 0 28px; font-weight: 600; font-size: 1.1rem; border-bottom:2px solid transparent;}
+    nav a:hover {border-bottom:2px solid #ffe580;}
+    /* --- HERO --- */
+    .hero{
+      background:#fff;max-width:1100px;margin:-30px auto 38px auto; border-radius:22px;
+      box-shadow:0 4px 20px #58a3e024; text-align:center; padding:38px 38px 45px 38px; position:relative;
+      animation:fadeIn 1.1s;
+    }
+    .hero-title{font-size:2rem;color:#2796d4;font-weight:700;margin:0 0 14px;}
+    .hero-mark{display:inline-block;background:#2796d4;color:#fff;font-weight:600;border-radius:18px;padding:8px 21px;font-size:1.08rem;}
+    .hero-desc{font-size:1.15rem;color:#3d4a4e;opacity:0.92;margin:18px auto 0;}
+    .hero-grid{display:flex;gap:32px;margin:35px 0 0 0;flex-wrap:wrap;justify-content:center;}
+    .hero-fact{flex:1;background:#f6f8fb;border-radius:13px;box-shadow:0 2px 12px #2796d41a;padding:16px 14px;min-width:240px;}
+    .hero-fact h3{font-size:1.12rem;color:#2796d4;margin:0 0 6px;}
+    .hero-fact p{color:#3d4a4e;margin:0;font-size:0.99rem;}
+    /* --- CATÁLOGO --- */
+    .section-title{font-size:1.44rem;color:#2796d4;margin:44px 0 18px 0;font-weight:700;}
+    .catalog{display:flex;flex-wrap:wrap;gap:50px;margin-top:28px;justify-content:center;}
+    .product{flex:1;min-width:270px;background:#f6f8fb;border-radius:14px;margin-bottom:32px;box-shadow:0 2px 13px #58a3e024;padding:31px 19px 25px 19px;text-align:center;position:relative;transition:all 0.18s;cursor:pointer;border:2px solid #f2f5fa;}
+    .product:hover{transform:scale(1.065);box-shadow:0 12px 32px #2796d422;border:2px solid #2796d4;z-index:1;}
+    .product img{width:94%;max-width:266px;border-radius:11px;margin-bottom:18px;background:#e1e7ea;box-shadow:0 2px 14px #2796d414;}
+    .product h2{color:#2796d4;margin:14px 0 8px 0;font-size:1.18rem;font-weight:600;}
+    .price{font-size:1.22rem;font-weight:700;color:#3d4a4e;margin-bottom:11px;letter-spacing:1px;}
+    .features{text-align:left;margin:12px 0 18px 0;font-size:1.03rem;min-height:112px;}
+    .buy-btn{display:inline-block;background:linear-gradient(90deg,#2796d4,#3d4a4e);color:#fff;text-decoration:none;padding:13px 28px;font-size:1.09rem;border-radius:20px;font-weight:700;transition:background 0.21s;margin-top:8px;letter-spacing:0.5px;}
+    .buy-btn:hover{background:linear-gradient(90deg,#3d4a4e,#2796d4);}
+    /* --- PÚBLICO --- */
+    .audience{background:#f6f8fb;border-radius:15px;padding:32px 24px;box-shadow:0 2px 14px #2796d414;margin-bottom:56px;text-align:center;}
+    .aud-list{display:flex;gap:34px;flex-wrap:wrap;justify-content:center;margin:30px 0;}
+    .aud-block{flex:1;min-width:180px;background:#e7f1fa;padding:16px 12px;border-radius:10px}
+    .aud-block h4{color:#3d4a4e;font-size:1.07rem;margin-bottom:6px;}
+    .aud-block p{color:#2e5566;font-size:0.97rem;margin-bottom:0;}
+    /* --- DIFERENCIADORES --- */
+    .diff-list{display:grid;grid-template-columns:1fr 1fr 1fr;gap:38px;margin:25px 0;}
+    .diff-block{background:#f1f5fa;padding:19px 15px;border-radius:10px;box-shadow:0 2px 11px #2796d412;text-align:center;}
+    .diff-block strong{color:#2796d4;display:block;font-size:1.11rem;margin-bottom:8px;}
+    .diff-block p{font-size:1rem;}
+    /* --- MÉTRICAS Y TESTIMONIOS --- */
+    .metrics{ background: #ebeded; border-radius: 16px; padding: 37px 32px; margin-bottom:60px; text-align: center; }
+    .metrics-list{ display: flex; flex-wrap: wrap; gap: 32px; justify-content: center; margin: 30px 0; }
+    .metric{ flex: 1; min-width: 190px; background: #e7f1fa; padding: 22px 14px; border-radius: 12px; font-weight:700;}
+    .testimonials {margin: 38px 0;}
+    .testimonial {background: #e1e7ea; color: #333; border-radius: 14px; padding: 18px 22px; margin: 16px 0 18px 0; box-shadow: 0 2px 7px #2796d418;}
+    .client {font-weight: bold; color: #2796d4;}
+    /* --- CONTACTO --- */
+    .contact-block {background: #f6f8fb; border-radius: 15px; padding: 34px 20px; text-align: center; box-shadow: 0 2px 13px #2796d419;}
+    .contact-block a {color: #2796d4; font-weight:700; text-decoration: underline; margin: 0 10px;}
+    /* --- PIE --- */
+    footer{ text-align:center; background: #3d4a4e; color: #fff; padding: 27px 0; margin-top:45px; font-size:1.1rem;}
+    @media (max-width:900px) {
+      .container{padding:16px;} .catalog{flex-direction:column;gap:34px;} .diff-list{grid-template-columns:1fr;}
+    }
+    @media (max-width:600px) {
+      .header h1{font-size:2rem;} .banner{font-size:0.93rem;}
+      .container{padding:6px;} .hero{padding:14px 5px 26px 5px;}
+      .diff-list{grid-template-columns:1fr;}
+      .metrics-list{flex-direction:column;gap:18px;}
+    }
+    @keyframes fadeIn {from {opacity:0;} to {opacity:1;}}
   </style>
 </head>
 <body>
   <div class="header">
     <h1>DeskUp</h1>
-    <p>Levántate. Muévete. Vive mejor</p>
+    <p>Liderazgo en Ergonomía, Salud y Estilo para Home Office y Empresas en Lima</p>
     <nav>
+      <a href="#hero">Inicio</a>
       <a href="#catalogo">Catálogo</a>
-      <a href="#why">¿Por qué DeskUp?</a>
-      <a href="#testimonios">Clientes</a>
+      <a href="#publico">Público objetivo</a>
+      <a href="#diferenciadores">Diferenciadores</a>
+      <a href="#metricas">Métricas y Resultados</a>
+      <a href="#testimonios">Testimonios</a>
       <a href="#contacto">Contacto</a>
     </nav>
   </div>
-  <div class="banner">
-    <span>🌟 Envíos GRATIS en Lima durante el lanzamiento. Descubre DeskUp y optimiza tu espacio hoy.</span>
+  <div class="hero" id="hero">
+    <span class="hero-mark">🚀 Ergonomía y diseño inteligente al alcance de todos</span>
+    <h2 class="hero-title">DeskUp: Optimizamos tu espacio, transformamos tu bienestar</h2>
+    <div class="hero-desc">
+      En Perú, más de <b>1 millón</b> de trabajadores padece molestias posturales y lumbalgia al año. Los escritorios elevables DeskUp previenen estos problemas y mejoran la productividad en oficinas y hogares.<br>
+      <i>Fabricación local, innovación funcional y garantía extendida: tu inversión en salud y eficiencia [file:1].</i>
+    </div>
+    <div class="hero-grid">
+      <div class="hero-fact"><h3>43% de los usuarios <br>mejoran su salud postural</h3><p>DeskUp ayuda a reducir el dolor lumbar y la fatiga asociada al trabajo sedentario.</p></div>
+      <div class="hero-fact"><h3>+25% <br>de aumento en eficiencia</h3><p>El diseño ergonómico y la altura regulable mejoran la concentración y bienestar diario.</p></div>
+      <div class="hero-fact"><h3>Envíos gratis y armado rápido</h3><p>Llega armado en solo 15 minutos, con soporte local y devolución gratuita por 30 días.</p></div>
+    </div>
   </div>
   <div class="container">
     <section id="catalogo">
-      <div class="section-title">Descubre nuestros modelos exclusivos</div>
+      <div class="section-title">Catálogo DeskUp 2025</div>
       <div class="catalog">
         <div class="product">
           <img src="imagen_v1.png" alt="Escritorio Elevable V1">
-          <h2>Escritorio Elevable V1</h2>
+          <h2>DeskUp V1 - Manual</h2>
           <div class="price">S/ 650</div>
           <div class="features">
             <ul>
-              <li>Ajuste manual por manivela, robusto y estable</li>
-              <li>Estructura metálica y tablero MDF 18mm</li>
-              <li>Regulación de altura 70-120cm</li>
-              <li>Soporta hasta 70kg</li>
-              <li>Acabados personalizados, ideal para home office</li>
+              <li>Ajuste por manivela, estructura metálica reforzada</li>
+              <li>Tablero MDF 18mm con acabados personalizados</li>
+              <li>Altura regulable 70-120cm, soporta hasta 70kg</li>
+              <li>Montaje rápido y silencioso</li>
+              <li>Ideal para home office y espacios compactos</li>
             </ul>
           </div>
-          <a class="buy-btn" href="https://wa.me/51999999999" target="_blank">Comprar</a>
+          <a class="buy-btn" href="https://wa.me/51999999999" target="_blank">Comprar o consultar</a>
         </div>
         <div class="product">
           <img src="imagen_v2.png" alt="Escritorio con Accesorios">
-          <h2>Escritorio con Accesorios</h2>
+          <h2>DeskUp Eléctrico + Accesorios</h2>
           <div class="price">S/ 780</div>
           <div class="features">
             <ul>
-              <li>Motor eléctrico silencioso, panel digital</li>
-              <li>Memoria de altura (4 presets)</li>
-              <li>Superficie anti-rayones y organizador de cables</li>
-              <li>Base antideslizante, diseño premium</li>
-              <li>Perfecto para profesionales creativos</li>
+              <li>Motor silencioso (<40dB), panel digital y memorias (hasta 4 alturas)</li>
+              <li>Superficie anti-rayones, gestión de cables y base antideslizante</li>
+              <li>Puerto USB integrado y acabados premium</li>
+              <li>Perfecto para creativos, ejecutivos y estudiantes exigentes</li>
             </ul>
           </div>
-          <a class="buy-btn" href="https://wa.me/51999999999" target="_blank">Comprar</a>
+          <a class="buy-btn" href="https://wa.me/51999999999" target="_blank">Comprar o consultar</a>
         </div>
         <div class="product">
           <img src="imagen_v3.png" alt="Estación de Trabajo Premium">
-          <h2>Estación de Trabajo Premium</h2>
+          <h2>DeskUp Work Premium</h2>
           <div class="price">S/ 1,200</div>
           <div class="features">
             <ul>
               <li>Motor dual, ultra silencioso y potente</li>
-              <li>Superficie amplia: 1.52m x 0.76m</li>
-              <li>Gestión de cables, puerto USB integrado</li>
-              <li>Acabados premium, soporte incluido</li>
-              <li>Ideal para teletrabajo y oficinas exigentes</li>
+              <li>Superficie amplia (1.52m x 0.76m) con gestión integral de cables</li>
+              <li>Panel touch, memoria digital y soporte profesional</li>
+              <li>Solución avanzada para oficinas corporativas y teletrabajo intensivo</li>
             </ul>
           </div>
-          <a class="buy-btn" href="https://wa.me/51999999999" target="_blank">Comprar</a>
+          <a class="buy-btn" href="https://wa.me/51999999999" target="_blank">Comprar o consultar</a>
         </div>
       </div>
     </section>
-    <section id="why">
-      <div class="section-title">¿Por qué elegir DeskUp?</div>
-      <ul>
-        <li>Mejora tu salud postural y previene lesiones.</li>
-        <li>Incrementa la productividad con cambios de altura.</li>
-        <li>Fácil montaje y soporte local en Lima.</li>
-        <li>Diseño pensado para espacios modernos y funcionales.</li>
-        <li>Garantía extendida y atención personalizada.</li>
-      </ul>
+    <section id="publico" class="audience">
+      <div class="section-title">¿Quiénes usan DeskUp?</div>
+      <div class="aud-list">
+        <div class="aud-block">
+          <h4>Profesionales jóvenes y teletrabajadores</h4>
+          <p>Residen en distritos como <b>San Isidro, Miraflores, Surco, San Borja</b>; buscan ergonomía, estilo y tecnología en espacios compactos [file:1].</p>
+        </div>
+        <div class="aud-block">
+          <h4>Freelancers y creadores de contenido</h4>
+          <p>Valoran personalización, organización y diseño estético para jornadas largas y equipos multiuso.</p>
+        </div>
+        <div class="aud-block">
+          <h4>Estudiantes universitarios</h4>
+          <p>Necesitan cuidar su postura y optimizar cada centímetro de departamento o residencia sin perder estilo propio.</p>
+        </div>
+        <div class="aud-block">
+          <h4>Empresas y oficinas corporativas</h4>
+          <p>Buscan mobiliario duradero que cumpla las normativas de ergonomía y reduzca ausencias laborales [file:1].</p>
+        </div>
+      </div>
+    </section>
+    <section id="diferenciadores">
+      <div class="section-title">Ventajas y Diferenciadores DeskUp</div>
+      <div class="diff-list">
+        <div class="diff-block"><strong>Fabricación local y sostenible</strong><p>Madera reforestada, acabados ecológicos, corte CNC y materiales premium para máxima durabilidad [file:1].</p></div>
+        <div class="diff-block"><strong>Funcionalidad smart</strong><p>Motor eléctrico silencioso, memorias de altura, panel táctil y gestión de cables integrada. Seguridad certificada y garantía de 5 años.</p></div>
+        <div class="diff-block"><strong>Diseño escandinavo y premium</strong><p>Minimalismo, colores personalizables y empaquetado elegante que mejora la imagen en videollamadas.</p></div>
+        <div class="diff-block"><strong>Montaje rápido y experiencia sin estrés</strong><p>Armado guiado, instrucciones visuales y video tutorial QR incluido. Instalación en menos de 20 minutos sin herramientas especiales.</p></div>
+        <div class="diff-block"><strong>Postventa y comunidad activa</strong><p>Devolución gratuita por 30 días, blog educativo, soporte técnico local y programa de referidos y beneficios exclusivos.</p></div>
+        <div class="diff-block"><strong>Precios competitivos</strong><p>Hasta 25% menos que marcas importadas. Garantía extendida, soporte local y personalización que maximiza el valor [file:1].</p></div>
+      </div>
+    </section>
+    <section id="metricas" class="metrics">
+      <div class="section-title">Métricas de Éxito & Resultados Esperados</div>
+      <div class="metrics-list">
+        <div class="metric">+10% crecimiento mensual de ventas</div>
+        <div class="metric">Satisfacción superior al 80% según encuestas postventa</div>
+        <div class="metric">30% de optimización espacio en departamentos limeños</div>
+        <div class="metric">Menos de 20% de usuarios reportan molestias posturales después de 3 meses de uso [file:1]</div>
+        <div class="metric">Catálogo en crecimiento: más de 7 modelos estimados en 2 años</div>
+        <div class="metric">Punto de equilibrio alcanzado vendiendo solo 15 escritorios al mes</div>
+      </div>
     </section>
     <section id="testimonios" class="testimonials">
       <div class="section-title">Lo que dicen nuestros clientes</div>
-      <div class="testimonial">
-        “Cambió mi rutina de home office. Ahora puedo trabajar de pie durante las videollamadas”. <span class="client">— Ana, Lima</span>
-      </div>
-      <div class="testimonial">
-        “El armado fue fácil y el motor silencioso me ayuda a alternar alturas sin molestar a nadie”. <span class="client">— Javier, Surco</span>
-      </div>
-      <div class="testimonial">
-        “El diseño minimalista encajó perfecto en mi estudio. Excelente atención y envío rápido”. <span class="client">— Mónica, San Isidro</span>
-      </div>
+      <div class="testimonial">“DeskUp me ha permitido cambiar mi rutina, alternando entre trabajo de pie y sentado. Ahora termino mis proyectos sin dolor lumbar.” <span class="client">— Ana, Lima</span></div>
+      <div class="testimonial">“El escritorio llegó con instrucciones claras y el montaje fue súper rápido. Excelente postventa, me siento respaldado.”<span class="client">— Javier, Surco</span></div>
+      <div class="testimonial">“La estética minimalista y el panel digital hacen mi home office mucho más profesional. Lo recomiendo a colegas.”<span class="client">— Mónica, San Isidro</span></div>
     </section>
     <section id="contacto">
       <div class="section-title">Contáctanos</div>
@@ -127,12 +203,13 @@
         ¿Tienes dudas? ¡Escríbenos por WhatsApp o correo!<br>
         <a href="https://wa.me/51999999999" target="_blank">WhatsApp DeskUp</a> |
         <a href="mailto:ventas@deskup.com">Correo de consultas</a>
-        <br><br><strong>Solicita tu demo virtual o cotiza tu modelo personalizado. <br> Envíos gratis en Lima por lanzamiento.</strong>
+        <br><br>
+        <b>Solicita tu demo virtual o cotiza tu escritorio a medida.<br> Envíos gratis en Lima y devolución gratuita por lanzamiento.</b>
       </div>
     </section>
   </div>
-  <footer style="text-align:center; background:#3d4a4e; color:#fff; padding:23px 0; margin-top:32px;">
-    DeskUp &copy; 2025 - Salud, diseño, productividad en cada escritorio.
+  <footer>
+    DeskUp &copy; 2025 — Innovación, salud y estilo en tu espacio de trabajo.
   </footer>
 </body>
 </html>
